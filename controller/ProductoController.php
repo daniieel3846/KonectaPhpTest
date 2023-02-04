@@ -1,5 +1,5 @@
 <?php
-require '../model/Producto.php';
+require_once '../model/Producto.php';
 
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
@@ -11,9 +11,7 @@ $stock = isset($_POST['stock']) ? $_POST['stock'] : null;
 
 class ProductoController {
 
-    function __construct() {
-        
-    }
+    function __construct() {}
 
     function getAll() {
         $producto = new Producto(NULL, NULL, NULL, NULL, NULL, NULL);
@@ -24,7 +22,6 @@ class ProductoController {
         $producto = new Producto(NULL, NULL, NULL, NULL, NULL, NULL);
         return $producto->findProductoById($id);
     }
-
 }
 
 if (isset($_POST['Guardar'])) {
@@ -34,7 +31,7 @@ if (isset($_POST['Guardar'])) {
         ?>
         <script>
             //alert("producto creado");
-            location.href = "../view/Index.php";
+            location.href = "../view/index.php";
         </script>
         <?php
     } else {
@@ -48,8 +45,8 @@ if (isset($_POST['Modificar'])) {
     if(isset($statement)) {
         ?>
         <script>
-            //alert("Registro Actualizado");
-            location.href = "../view/Index.php";
+            //alert("producto actualizado");
+            location.href = "../view/index.php";
         </script>
         <?php
     } else {
@@ -76,5 +73,3 @@ if (isset($_GET["updateId"])) {
     </script>
     <?php
 }
-
-

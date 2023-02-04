@@ -67,6 +67,21 @@ class Producto {
         }
     }
 
+    public function UpdateProductoStock($id) {
+        try {
+            $current_date = date('y-m-d');
+            $sql = "UPDATE PRODUCTO SET stock = ?, updateAt = ? WHERE id = $id";
+            $query = $this->conexionDB->onConnect()->prepare($sql);
+            $query->execute(array(
+                $this->stock,
+                $current_date
+            ));
+            return $query;
+        } catch (Exception $e) {
+            die("Se produjo un error $e");
+        }
+    }
+
     public function findAll() {
         $sql = "SELECT * FROM PRODUCTO";
         $query = $this->conexionDB->onConnect()->prepare($sql);

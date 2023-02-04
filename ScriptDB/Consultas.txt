@@ -1,0 +1,10 @@
+----Consulta 1 ---
+SELECT * from producto 
+where stock in (SELECT MAX(stock) from producto)
+
+----Consulta 2 -----
+SELECT p.nombre as nombre_producto, sum( v.cantidad ) as total_vendidos
+from producto p 
+INNER JOIN venta v on(p.id = v.id_producto)
+GROUP BY v.id_producto
+order by total_vendidos desc limit 1

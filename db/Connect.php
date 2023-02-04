@@ -1,9 +1,5 @@
 <?php
-/**
- * Description of Connect
- *
- * @author Danielpg
- */
+
 require_once('Config.php');
 
 class Connect {

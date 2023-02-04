@@ -7,6 +7,7 @@ include '../controller/ProductoController.php';
         <meta charset="UTF-8">
         <title>Cafe Konecta</title>
         <link rel="stylesheet" href="../assets/css/style.css" >
+        <link rel="icon" type="image/x-icon" href="../assets/images/icon.jpg" />
         <!-- Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
@@ -25,6 +26,7 @@ include '../controller/ProductoController.php';
             ?>
             <h2 class='text-center'>Lista de Productos</h2>
             <a href="ModuloProducto.php?id=0" class='btn btn-primary mb-1'>Almacenar</a>
+            <a href="ModuloVenta.php?id=0" class='btn btn-success mb-1'>Nueva Venta</a>
             <div class='row'>
                 <table class='table table-striped table-bordered'>
                     <thead>
