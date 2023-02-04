@@ -43,13 +43,13 @@ include '../controller/ProductoController.php';
                             <tr>
                                 <td><?php echo $value['nombre']; ?></td>
                                 <td><?php echo $value['referencia']; ?></td>
-                                <td><?php echo $value['precio']; ?></td>
-                                <td><?php echo $value['peso']; ?></td>
+                                <td>$<?php echo $value['precio']; ?></td>
+                                <td><?php echo $value['peso']; ?> kg</td>
                                 <td><?php echo $value['categoria']; ?></td>
                                 <td><?php echo $value['stock']; ?></td>
                                 <td>
-                                    <a href="controller/ProductoController.php?id=<?php echo $value['id'] ?>" class="btn btn-warning">Gestionar</a>
-                                    <a onclick="return confirmar()" href="../controller/ProductoController.php?id=<?php echo $value['id'] ?>" class="btn btn-danger">Eliminar</a>
+                                    <a href="../controller/ProductoController.php?updateId=<?php echo $value['id'] ?>" class="btn btn-warning">Gestionar</a>
+                                    <a onclick="return confirmar()" href="../controller/ProductoController.php?deleteId=<?php echo $value['id'] ?>" class="btn btn-danger">Eliminar</a>
                                 </td>
                             </tr>
                         <?php } ?>            
